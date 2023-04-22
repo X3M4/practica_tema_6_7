@@ -1,0 +1,14 @@
+package colaTradicional;
+
+public class  U6y7E02C {
+	public static void main(String[] args) {
+		ColaArrayInt cai = new ColaArrayInt();
+		cai.encolar(1);
+		System.out.println(cai.toString());
+		cai.encolar(56);
+		cai.encolar(5);
+		cai.encolar(76);
+		
+		
+	}
+}

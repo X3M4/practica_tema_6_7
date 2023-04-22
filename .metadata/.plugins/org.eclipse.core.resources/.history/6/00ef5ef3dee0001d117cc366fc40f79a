@@ -1,0 +1,86 @@
+package colasOOP;
+
+public class ColaArrayObj implements ColaOOP{
+	private static final int LONGITUD_POR_DEFECTO = 20;
+	private int max_longitud;
+	private int cabeza;
+	private int fin;
+	private Object[] datos;
+	
+	public ColaArrayInt() {
+		this.datos = new Object[this.LONGITUD_POR_DEFECTO];
+		this.max_longitud = this.LONGITUD_POR_DEFECTO + 1;
+		this.fin = 0;
+		this.cabeza = 1;
+	}
+	
+	public ColaArrayInt(int longitud) {
+		this.max_longitud = longitud +1;
+		this.fin = 0;
+		this.cabeza = 1;
+		this.datos = new Object[this.max_longitud];
+	}
+	
+	@Override
+	public void vaciar() {
+		// TODO Auto-generated method stub
+		this.fin = 0;
+		this.cabeza = 1;
+	}
+	
+	@Override
+	public boolean encolar(int o) {
+		// TODO Auto-generated method stub
+		if((this.fin + 2) % this.max_longitud != this.cabeza) {
+			this.fin = (this.fin + 1) % this.max_longitud;
+			datos[this.fin] = o;
+			return true;
+		}
+		else {
+			throw new IndexOutOfBoundsException("La cola está llena");
+		}
+	}
+	
+	@Override
+	public Object desencolar(){
+		// TODO Auto-generated method stub
+		if(longitud() != 0) {
+			Object o = datos[cabeza];
+			datos[cabeza] = 0;
+			this.cabeza = (cabeza + 1) % this.max_longitud;
+			return o;
+			
+		}else {
+			throw new IllegalArgumentException("La cola está vacía");
+		}
+		
+	}
+
+	@Override
+	public int primero() throws IllegalArgumentException{
+		// TODO Auto-generated method stub
+		if(longitud() != 0) {
+			return datos[this.cabeza];
+		}else {
+			throw new IllegalArgumentException("La cola está vacía");
+		}
+	}
+
+	@Override
+	public int longitud() {
+		// TODO Auto-generated method stub
+		return (this.fin + this.max_longitud - this.cabeza + 1) % this.max_longitud;
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("[");
+		for(int i = 0; i < this.datos.length; i++) {
+			sb.append(datos[i] + "-");
+		}
+		sb.append("]");
+		return sb.toString();
+	}
+
+}

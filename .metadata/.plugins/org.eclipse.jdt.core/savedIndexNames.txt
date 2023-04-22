@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/home/chema/Documentos/CFGS-DAM/PROGRAMACION/TEMA 7 - STREAMS Y FICHEROS/PRÁCTICA/colaTradicional/.metadata/.plugins/org.eclipse.jdt.core
+1507002171.index
+1865797976.index
+3812284196.index

@@ -1,0 +1,5 @@
+package colaTradicional;
+
+public interface ColaInt {
+
+}

@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author chema
+ *
+ */
+module colaTradicional {
+}

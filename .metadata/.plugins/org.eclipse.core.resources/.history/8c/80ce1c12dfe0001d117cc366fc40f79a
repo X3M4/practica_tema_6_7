@@ -1,0 +1,14 @@
+package colasOOP;
+
+public interface ColaOOP {
+	public void vaciar();
+	
+	public boolean encolar(int o);
+	
+	public Object desencolar();
+	
+	public int primero();
+	
+	public int longitud();
+	
+}
